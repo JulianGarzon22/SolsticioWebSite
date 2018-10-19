@@ -11,8 +11,14 @@
 |
 */
 
-Route::redirect('/', 'inicio');
-
 Auth::routes();
 
-Route::get('/inicio', 'Web\PageController@inicio')->name('inicio');
+Route::get('/inicio', 'Web\PageController@inicio');
+
+Route::get( '/phpinfo', function () {
+    echo phpinfo();
+} );
+
+Route::get('/', function () {
+    return view('web.inicio');
+});

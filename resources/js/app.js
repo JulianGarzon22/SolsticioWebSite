@@ -6,6 +6,9 @@
  */
 
 import axios from 'axios';
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 require('./bootstrap');
 
@@ -20,6 +23,8 @@ window.Vue = require('vue');
 Vue.component('nav-bar', require('./components/NavBar.vue'));
 Vue.component('nav-bar-admin', require('./components/NavBarAdmin.vue'));
 Vue.component('landing', require('./components/Landing.vue'));
+Vue.use(BootstrapVue);
+
 
 const app = new Vue({
     el: '#app'

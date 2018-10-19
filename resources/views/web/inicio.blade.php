@@ -10,8 +10,13 @@
     <title>Solsticio</title>
   </head>
   <body>
-    <nav-bar></nav-bar>
-    <landing></landing>
+
+    <div id="app">
+
+      <nav-bar></nav-bar>
+      <landing></landing>
+
+    </div>
 
     <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
 

@@ -18,7 +18,7 @@
                           @sliding-end="onSlideEnd"
               >
 
-                <b-carousel-slide v-for="post in posts" :img-src="post.file">
+                <b-carousel-slide v-for="post in posts" :key="post.id" :img-src="post.file">
                   <h3> {{ post.name }}</h3>
                   <p> {{ post.excerpt }} </p>
                   <a href="#" class="btn btn-outline-secondary btn-lg text-white">
@@ -36,39 +36,20 @@
       </div>
     </header>
 
-    <!-- NEWSLETTER  -->
-    <section id="newsletter" class="bg-light text-white py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <input type="text" class="form-control form-control-lg" placeholder="Ingrese su nombre">
-          </div>
-          <div class="col-md-4">
-            <input type="email" class="form-control form-control-lg" placeholder="Ingrese su correo">
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-secondary btn-lg btn-block">
-              Suscribirse
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- TEAM -->
     <section class="text-center team">
       <div class="container p-5">
-        <h1 class="text-center text-white">Administradora</h1>
-        <p class="text-white">
+        <h1 class="text-center text-black">Administradora</h1>
+        <p class="text-dark">
           Adipisicing unde eum odio aliquam dolor ad voluptas expedita consequuntur aperiam inventore eaque. Dolorum facilis aut eum a delectus. Fugit velit quas harum quisquam amet provident inventore. Repudiandae repudiandae delectus.
         </p>
-        <div class="row justify-content-md-center">
 
           <!-- USER TEAM -->
+        <div class="row justify-content-md-center">
           <div class="col-lg-4 justify-content-center align-self-center">
             <div class="card">
               <div class="card-body">
-                <img src="../../images/person.png" class="img-fluid rounded-circle w-50">
+                <img src="http://localhost/solsticio/public/images/person.png" class="img-fluid rounded-circle w-50">
                 <h3>Lady Rincon</h3>
                 <p>
                   Dolor modi repudiandae quia beatae consectetur? Nam ullafugit ullam, accusamus! Totam mollitia eveniet!
@@ -84,7 +65,7 @@
       <div class="container p-3">
         <div class="row text-center">
           <div class="col ml-auto">
-            <p>Copyright &copy; 2018</p>
+            <p class="text-white">Copyright &copy; 2018</p>
           </div>
         </div>
       </div>
@@ -106,7 +87,7 @@ export default {
   },
   methods: {
     readPost() {
-      axios.get('http://localhost/solsticio/public/inicio').then(response => {
+      axios.get('http://localhost/solsticio/public/inicio.json').then(response => {
         this.posts = response.data
       });
     },
@@ -125,9 +106,9 @@ export default {
 
   .main-header {
     position: relative;
-    background: url(../../images/background.jpg);
+    background: url(http://localhost/solsticio/public/images/background.jpg);
     background-size: cover;
-    min-height: 560px;
+    min-height: 400px;
   }
 
   .background-overlay {
@@ -144,16 +125,12 @@ export default {
     width: 80%;
   }
 
-  .form-control, .btn{
-    border-radius: 0;
+  .card-body img {
+    width: 50%;
   }
 
-  .team {
-    background: #7f0000;
-  }
-
-  .main-news {
-    background: #7f0000;
+  footer {
+    background: rgba(127, 0, 0);
   }
 
 </style>

@@ -23,7 +23,7 @@ window.Vue = require('vue');
 Vue.component('nav-bar', require('./components/NavBar.vue'));
 Vue.component('nav-bar-admin', require('./components/NavBarAdmin.vue'));
 Vue.component('landing', require('./components/Landing.vue'));
-Vue.component('noticias', require('./components/Noticias.vue'));
+Vue.component('services', require('./components/Services.vue'));
 Vue.use(BootstrapVue);
 
 

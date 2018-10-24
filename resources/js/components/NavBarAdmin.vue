@@ -1,43 +1,25 @@
 <template lang="html">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">Solsticio Parque Residencial</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Noticias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Archivo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Clasificados</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Peticiones</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Censo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Galeria</a>
-          </li>
-          <li class="nav-item">
-            <a id="pagos" class="nav-link" href="#">Pagos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <b-navbar toggleable="md" type="dark" variant="dark">
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+    <b-navbar-brand href="#">Solsticio Parque Residencial</b-navbar-brand>
+
+    <b-collapse is-nav id="nav_collapse">
+
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item href="#">Inicio</b-nav-item>
+        <b-nav-item href="#">Noticias</b-nav-item>
+        <b-nav-item href="#">Servicios</b-nav-item>
+        <b-nav-item href="#">Archivo</b-nav-item>
+        <b-nav-item href="#">Clasificados</b-nav-item>
+        <b-nav-item href="#">Peticiones</b-nav-item>
+        <b-nav-item href="#">Censo</b-nav-item>
+        <b-nav-item href="#">Galeria</b-nav-item>
+        <b-nav-item href="#">Pagos</b-nav-item>
+      </b-navbar-nav>
+
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>

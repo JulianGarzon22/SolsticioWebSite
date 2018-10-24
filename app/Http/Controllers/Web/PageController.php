@@ -14,8 +14,8 @@ class PageController extends Controller
     }
 
     public function noticias() {
-      $news = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(5)->get();
-      return response($news->jsonSerialize(), 1000);
+      $posts = Post::orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(8);
+      return view('web.noticias', compact('posts'));
     }
 
 }

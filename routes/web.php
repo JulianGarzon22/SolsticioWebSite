@@ -15,7 +15,15 @@ Route::get('/', function () {
     return view('web.inicio');
 });
 
+Route::get('/inicio', function () {
+    return view('web.inicio');
+});
+
+Route::get('/servicios', function () {
+    return view('web.servicios');
+});
+
 Auth::routes();
 
-Route::get('/inicio', 'Web\PageController@inicio')->name('inicio');
-Route::get('/noticias', 'Web\PageController@noticias')->name('noticias');
+Route::get('/inicio.json', 'Web\PageController@inicio');
+Route::get('/noticias', 'Web\PageController@noticias');

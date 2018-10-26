@@ -27,3 +27,4 @@ Auth::routes();
 
 Route::get('/inicio.json', 'Web\PageController@inicio');
 Route::get('/noticias', 'Web\PageController@noticias');
+Route::get('/archivo', 'Web\PageController@archivo');

@@ -23,8 +23,25 @@ Route::get('/servicios', function () {
     return view('web.servicios');
 });
 
+Route::get('/peticiones', function () {
+    return view('web.peticiones');
+});
+
+Route::get('/censo', function () {
+    return view('web.censo');
+});
+
+Route::get('/pagos', function () {
+    return view('web.pagos');
+});
+
 Auth::routes();
 
 Route::get('/inicio.json', 'Web\PageController@inicio');
+
 Route::get('/noticias', 'Web\PageController@noticias');
-Route::get('/archivo', 'Web\PageController@archivo');
+Route::get('/noticias/{slug}', 'Web\PageController@post')->name('post');
+
+Route::get('/archivos', 'Web\PageController@archivos');
+
+Route::get('/clasificados', 'Web\PageController@clasificados');

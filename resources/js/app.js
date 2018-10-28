@@ -24,6 +24,7 @@ Vue.component('nav-bar', require('./components/NavBar.vue'));
 Vue.component('nav-bar-admin', require('./components/NavBarAdmin.vue'));
 Vue.component('landing', require('./components/Landing.vue'));
 Vue.component('services', require('./components/Services.vue'));
+Vue.component('pagos', require('./components/Pagos.vue'));
 Vue.use(BootstrapVue);
 
 

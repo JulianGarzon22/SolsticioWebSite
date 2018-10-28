@@ -11,10 +11,10 @@ class Classified extends Model
     ];
 
     public function user()  {
-        return $this->belongsTo(User::tag);
+        return $this->belongsTo(User::class);
     }
 
     public function category()  {
-        return $this->belongsTo(Category::tag);
+        return $this->belongsTo(Category::class);
       }
 }

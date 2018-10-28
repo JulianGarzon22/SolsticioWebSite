@@ -26,7 +26,7 @@
             <div class="card-body">
               <h5 class="card-title">{{$post->title}}</h5>
               <p class="card-text">{{$post->excerpt}}</p>
-              <a href="#" class="btn btn-secondary">Leer Más</a>
+              <a href="{{ route('post', $post -> slug )}}" class="btn btn-secondary">Leer Más</a>
             </div>
           </div>
         </div>
@@ -37,14 +37,14 @@
     </div>
 
     <div class="container">
-      <div class="col-sm-6 offset-sm-3">
+      <div class="col-sm-6 offset-sm-4">
         {{$posts->links()}}
       </div>
     </div>
 
     <style media="screen">
       body {
-        background: rgba(127, 0, 0);
+          background: rgba(127, 0, 0);
       }
     </style>
 

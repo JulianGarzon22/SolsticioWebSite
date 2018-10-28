@@ -7,12 +7,13 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <title>Archivo</title>
+    <title>Solsticio</title>
   </head>
   <body>
 
     <div id="app">
-      <nav-bar></nav-bar>
+        <nav-bar></nav-bar>
+        <pagos></pagos>
     </div>
 
     <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
